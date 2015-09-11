@@ -1,0 +1,88 @@
+//test/student.js
+
+var request = require('supertest'),
+	should= require('should-http');
+	
+describe('student',function(){//for whole student
+	var url= 'localhost:5000';
+	
+	
+	
+	describe('find()',function(){//each unit
+		
+		it('should retrieve all student records',function(done){//test case
+			//assert.equal(example.add(0,7),7);
+			request(url).get('/student').end(function(err,res){
+				if(err) throw err;
+				res.should.have.status(200);				//response 
+				res.body.should.be.an.instanceOf(Array);
+				done();
+			});
+		
+	
+		});
+	});
+	
+	
+	describe('find1()',function(){//each unit
+		
+		it('should retrieve one existing student record',function(done){//test case
+			//assert.equal(example.add(0,7),7);
+			request(url).get('/student/2013-09918').end(function(err,res){
+				if(err) throw err;
+				
+				res.should.have.status(200);				//response 
+				res.body.should.be.an.instanceOf(Object);
+				
+				done();
+				
+				
+			});
+		
+	
+		});
+	});
+
+
+
+	describe('insert()',function(){//each unit
+		
+		it('should return newly created record',function(done){//test case
+			//assert.equal(example.add(0,7),7);
+			request(url).post('/student')
+			.send({'studNo':'2013-06797','name':'Aleli','bdate':'1996-12-28'})
+			.end(function(err,res){
+				if(err) throw err;
+				
+				res.should.have.status(200);				//response 
+				res.body.should.be.an.instanceOf(Object);
+				
+				done();
+				
+				
+			});
+		
+	
+		});
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
