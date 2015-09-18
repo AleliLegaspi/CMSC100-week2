@@ -37,7 +37,7 @@ exports.insert = function(req,res,next){//function for finding a particular stud
         function(err,rows){
         
           if(err) return next(err);//skip
-          res.send(rows);                              //sends the resulting row
+          res.send();                              //sends the resulting row
       });
 };
 
