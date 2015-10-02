@@ -28,5 +28,3 @@ app.route('/students')
   //separate handlers into another modules
   //__dirname : on where the file is located
       
-      
-      app.use(express.static(__dirname+'/public'));

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html> <!--1 root element-->
+	<head>
+		<title> CMSC100 HTML 5 </title>
+		<meta charset="utf-8"/>	<!--required-->
+	</head>
+	
+	<body>
+	
+	<!--
+		<form method="POST" action="http://localhost:5000/student">
+			<input type="text" name="studNo" placeholder="Student Number" pattern="^[0-9]{4}-[0-9]{5}$" required="true" title="FORMAT: xxxx-xxxxx" />
+			<input type="text" name="name" placeholder="Name"/>
+			<input type="date" name="bdate" />
+			<input type="submit" value="Create"/>
+		
+		</form>
+	-->
+		
+		<form method="GET" action="http://localhost:5000/student">
+			<input type="text" name="studNo" placeholder="Student Number" pattern="^[0-9]{4}-[0-9]{5}$" required="" title="FORMAT: xxxx-xxxxx" /><!--disabled="true"-->
+			<input type="text" name="name" placeholder="Name"/>
+			<input type="date" name="bdate" />
+			<input type="submit" value="Create"/>
+			
+			
+			<input type="month"  />
+			<input type="week"  />
+			<input type="color"  />
+			<input type="range" />
+			<input type="number"  />
+			<input type="time"  />
+			<input type="email"  />
+			<input type="url"  />
+			<input type=""  />
+		
+		</form>
+		
+		
+	
+	
+	
+	</body>
+
+</html>
